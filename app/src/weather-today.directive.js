@@ -1,16 +1,33 @@
 ﻿(function(angular) {
-  angular.module("app").directive("weatherToday", [
-    "weather",
-    function(weather) {
+  class WeatherToday {
+    $postLink = () => console.log("$postLink");
+    $onChanged = () => console.log("$onChanged");
+    $onInit = () => {
+      console.log("$onInit");
+      this.weatherInfo = this.weather.getInfo();
+    };
+    $onDestroy = () => console.log("$onDestroy");
+
+    constructor(weather) {
+      this.weather = weather;
+    }
+  }
+  WeatherToday.$inject = ["weather"];
+
+  angular.module("app").directive(
+    "weatherToday",
+
+    function() {
       return {
-        restrict: "E",
         replace: true,
-        scope: true,
-        template: "<h2>The weather outside is {{ weatherInfo }}.</h2>",
-        link: function(scope) {
-          scope.weatherInfo = weather.getInfo();
-        }
+        scope: {},
+        bindToController: {
+          weatherInfo: "<"
+        },
+        controller: WeatherToday,
+        controllerAs: "$ctrl",
+        template: "<h2>The weather outside is {{ $ctrl.weatherInfo }}.</h2>"
       };
     }
-  ]);
+  );
 })(angular);

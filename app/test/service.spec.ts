@@ -1,5 +1,4 @@
-﻿
-import "angular-mocks";
+﻿import "angular-mocks";
 import angular from "angular";
 
 describe("weather service", () => {

@@ -6,11 +6,15 @@
     "removeComments": false,
     "preserveConstEnums": true,
     "sourceMap": true,
-    "outFile": "app/app.bundle.js"
+    "outFile": "app/app.bundle.js",
+    "lib": ["es5", "dom", "es2015"],
+    "types": ["angular", "angular-route"],
+    "experimentalDecorators": true
   },
   "compileOnSave": false,
   "include": [
     "app/app.module.js",
-    "app/src/**/*js"
+    "app/src/**/*.js",
+    "app/src/**/*.ts"
   ]
 }

@@ -8,7 +8,7 @@
     "preserveConstEnums": true,
     "sourceMap": true,
     "lib": ["es5", "dom", "es2015"],
-    "types": ["angular", "angular-mocks", "jasmine"]
+    "types": ["angular", "angular-route", "angular-mocks", "jasmine"]
   },
   "compileOnSave": false
 }

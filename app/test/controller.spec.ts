@@ -2,7 +2,6 @@
 import angular from "angular";
 
 describe("weather controller", () => {
-  var $rootScope: any;
   var $controller: any;
 
   var testDateValue = "2017/8/22";
@@ -12,19 +11,17 @@ describe("weather controller", () => {
   beforeEach(
     angular.mock.inject((_$controller_: any, _$rootScope_: any) => {
       $controller = _$controller_;
-      $rootScope = _$rootScope_;
     })
   );
 
   it("should initialize correctly", () => {
-    $controller("weatherController", {
-      $scope: $rootScope,
+    const controller = $controller("weatherController", {
       date: {
         getDateString: function() {
           return testDateValue;
         }
       }
     });
-    expect($rootScope.getDate()).toBe(testDateValue);
+    expect(controller.getDate()).toBe(testDateValue);
   });
 });
