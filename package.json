@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "In-place source upgrade with TS",
   "scripts": {
+    "build:app": "tsc -p tsconfig.json",
+    "build:vendor": "tsc -p tsconfig.vendor.json",
+    "build": "npm-run-all build:*",
+    "clean:app": "rimraf src/app.bundle.js",
+    "clean:vendor": "rimraf src/vendor.bundle.js",
+    "clean": "npm-run-all clean:*",
     "test": "karma start"
   },
   "license": "ISC",
@@ -23,6 +29,8 @@
     "karma-phantomjs-launcher": "1.0.4",
     "karma-spec-reporter": "0.0.32",
     "karma-typescript": "3.0.12",
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2",
     "typescript": "2.7.2"
   }
 }
