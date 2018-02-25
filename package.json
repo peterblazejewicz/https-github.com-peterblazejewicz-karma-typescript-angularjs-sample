@@ -18,13 +18,13 @@
     "angular-mocks": "1.5.5",
     "angular-route": "1.5.5",
     "jasmine-core": "^2.6.2",
-    "karma": "^1.7.0",
-    "karma-chrome-launcher": "^2.1.1",
-    "karma-jasmine": "^1.1.0",
-    "karma-phantomjs-launcher": "^1.0.4",
-    "karma-spec-reporter": "0.0.31",
-    "karma-typescript": "3.0.3",
-    "typescript": "2.3.4",
+    "karma": "2.0.0",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-jasmine": "1.1.1",
+    "karma-phantomjs-launcher": "1.0.4",
+    "karma-spec-reporter": "0.0.32",
+    "karma-typescript": "3.0.12",
+    "typescript": "2.7.2",
     "webpack": "^3.4.1"
   }
 }
