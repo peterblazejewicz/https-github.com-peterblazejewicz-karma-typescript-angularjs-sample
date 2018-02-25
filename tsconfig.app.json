@@ -1,14 +1,16 @@
 ﻿{
   "compilerOptions": {
     "allowJs": true,
-    "module": "commonjs",
+    "module": "none",
     "noImplicitAny": true,
-    "removeComments": true,
+    "removeComments": false,
     "preserveConstEnums": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "outFile": "app/app.bundle.js"
   },
   "compileOnSave": false,
   "include": [
-    "app"
+    "app/app.module.js",
+    "app/src/**/*js"
   ]
 }
