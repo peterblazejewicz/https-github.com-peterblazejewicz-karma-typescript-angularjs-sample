@@ -12,6 +12,6 @@
       return this.date.getDateString(new Date());
     }
   }
-  WeatherController.$inject = ["date"];
-  angular.module("app").controller("weatherController", WeatherController);
+  WeatherController.$inject = ['date'];
+  angular.module('app').controller('weatherController', WeatherController);
 })(angular);

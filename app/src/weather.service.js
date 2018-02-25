@@ -1,26 +1,26 @@
 ﻿(function(angular) {
-  angular.module("app").service("weather", [
-    "temperature",
+  angular.module('app').service('weather', [
+    'temperature',
     function(temperature) {
       this.getInfo = function() {
         var time = new Date().getTime();
         var weatherIndex = time % 3;
-        var weatherStatus = "";
+        var weatherStatus = '';
 
         switch (weatherIndex) {
           case 0:
-            weatherStatus = "Rainy";
+            weatherStatus = 'Rainy';
             break;
           case 1:
-            weatherStatus = "Sunny";
+            weatherStatus = 'Sunny';
             break;
           case 2:
-            weatherStatus = "Snowy";
+            weatherStatus = 'Snowy';
             break;
         }
 
-        return weatherStatus + " with " + temperature.getInfo(weatherIndex);
+        return weatherStatus + ' with ' + temperature.getInfo(weatherIndex);
       };
-    }
+    },
   ]);
 })(angular);
