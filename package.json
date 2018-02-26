@@ -9,6 +9,7 @@
     "clean:app": "rimraf src/app.bundle.js",
     "clean:vendor": "rimraf src/vendor.bundle.js",
     "clean": "npm-run-all clean:*",
+    "start": "serve app/ -s",
     "test": "karma start ./karma.conf.ts"
   },
   "license": "ISC",
@@ -32,6 +33,7 @@
     "karma-typescript": "3.0.12",
     "npm-run-all": "^4.1.2",
     "rimraf": "^2.6.2",
+    "serve": "^6.5.0",
     "ts-node": "^5.0.0",
     "typescript": "2.7.2"
   }
