@@ -1,14 +1,14 @@
 ﻿import 'angular-mocks';
-import angular from 'angular';
+import angular, { auto } from 'angular';
 
 describe('weather service', () => {
   var weather: any;
 
-  beforeEach(angular.mock.module('app'));
+  beforeEach(angular.mock.module('weather.app'));
 
   beforeEach(
-    inject((_weather_: angular.IModule) => {
-      weather = _weather_;
+    inject(($injector: auto.IInjectorService) => {
+      weather = $injector.get('weather.service');
     }),
   );
 

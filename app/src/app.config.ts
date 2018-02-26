@@ -5,13 +5,13 @@
   ) {
     $routeProvider
       .when('/weather', {
-        templateUrl: 'src/weather.template.html',
-        controller: 'weatherController',
+        templateUrl: 'src/weather/weather.template.html',
+        controller: 'weather.controller',
         controllerAs: '$ctrl',
       })
       .otherwise({ redirectTo: '/weather' });
   }
   AppConfig.$inject = ['$provide', '$routeProvider'];
 
-  angular.module('app').config(AppConfig);
+  angular.module('weather.app').config(AppConfig);
 })(angular);

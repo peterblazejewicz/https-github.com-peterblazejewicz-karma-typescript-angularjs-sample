@@ -6,17 +6,17 @@ describe('weather controller', () => {
 
   var testDateValue = '2017/8/22';
 
-  beforeEach(angular.mock.module('app'));
+  beforeEach(angular.mock.module('weather.app'));
 
   beforeEach(
-    angular.mock.inject((_$controller_: any, _$rootScope_: any) => {
+    angular.mock.inject((_$controller_: any) => {
       $controller = _$controller_;
     }),
   );
 
   it('should initialize correctly', () => {
-    const controller = $controller('weatherController', {
-      date: {
+    const controller = $controller('weather.controller', {
+      "date.service": {
         getDateString: function() {
           return testDateValue;
         },

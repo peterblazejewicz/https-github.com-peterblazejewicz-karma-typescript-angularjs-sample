@@ -12,9 +12,9 @@
       this.weather = weather;
     }
   }
-  WeatherToday.$inject = ['weather'];
+  WeatherToday.$inject = ['weather.service'];
 
-  angular.module('app').directive(
+  angular.module('weather.app').directive(
     'weatherToday',
 
     function() {

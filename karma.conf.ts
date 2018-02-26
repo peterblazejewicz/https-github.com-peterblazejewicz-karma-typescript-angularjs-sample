@@ -12,7 +12,7 @@ export default function(config: Config & ConfigOptions) {
     files: [
       'app/vendor.bundle.js',
       'app/app.module.js',
-      'app/src/*.+(js|ts)',
+      'app/src/**/*.+(js|ts)',
       'app/test/*.+(js|ts)',
     ],
 

@@ -4,5 +4,5 @@
       return dt.getFullYear() + '/' + (dt.getMonth() + 1) + '/' + dt.getDate();
     }
   }
-  angular.module('app').service('date', DateService);
+  angular.module('weather.app').service('date.service', DateService);
 })(angular);

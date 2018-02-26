@@ -1,5 +1,4 @@
 ﻿(function(angular) {
   angular
-    .module("app", ["ngRoute"])
-    .run(["$rootScope", function($rootScope) {}]);
+    .module("weather.app", ["ngRoute"]);
 })(angular);

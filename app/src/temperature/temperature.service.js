@@ -11,5 +11,5 @@
       }
     }
   }
-  angular.module('app').service('temperature', TemperatureService);
+  angular.module('weather.app').service('temperature.service', TemperatureService);
 })(angular);

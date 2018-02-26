@@ -1,6 +1,6 @@
 ﻿(function(angular) {
-  angular.module('app').service('weather', [
-    'temperature',
+  angular.module('weather.app').service('weather.service', [
+    'temperature.service',
     function(temperature) {
       this.getInfo = function() {
         var time = new Date().getTime();
