@@ -1,14 +1,7 @@
 {
+  "extends": "./tsconfig.shared.json",
   "compilerOptions": {
-    "allowJs": true,
     "module": "commonjs",
-    "esModuleInterop": true,
-    "noImplicitAny": true,
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "lib": ["es5", "dom", "es2015"],
     "types": ["angular", "angular-route", "angular-mocks", "jasmine"]
-  },
-  "compileOnSave": false
+  }
 }

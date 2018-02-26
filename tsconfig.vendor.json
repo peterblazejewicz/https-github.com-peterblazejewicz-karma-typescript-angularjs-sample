@@ -1,15 +1,9 @@
 ﻿{
+  "extends": "./tsconfig.shared.json",
   "compilerOptions": {
-    "allowJs": true,
-    "module": "none",
-    "noImplicitAny": false,
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "sourceMap": true,
     "outFile": "app/vendor.bundle.js",
     "types": ["angular", "angular-route"]
   },
-  "compileOnSave": false,
   "exclude": [
     "node_modules"
   ],

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "lib": ["es5", "dom", "es2015"],
+    "module": "none",
+    "noImplicitAny": true,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "types": ["angular", "angular-route"]
+  },
+  "compileOnSave": false
+}
