@@ -1,9 +1,15 @@
 ﻿interface IWeatherController {
+  /**
+   * Returns date as String
+   * @returns {string}
+   * @memberof IWeatherController
+   */
   getDate(): string;
 }
 
+
 (function(angular) {
-  class WeatherController<IWeatherController> {
+  class WeatherController implements IWeatherController {
     constructor(private date: any) {
       debugger;
     }
