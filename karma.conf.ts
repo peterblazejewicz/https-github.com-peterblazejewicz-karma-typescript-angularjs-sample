@@ -13,7 +13,7 @@ export default function(config: Config & ConfigOptions) {
       'app/vendor.bundle.js',
       'app/app.module.js',
       'app/src/**/*.+(js|ts)',
-      'app/test/*.+(js|ts)',
+      'app/test/**/*.spec.+(js|ts)',
     ],
 
     // preprocess matching files before serving them to the browser
