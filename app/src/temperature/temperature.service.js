@@ -1,5 +1,11 @@
-﻿(function(angular) {
+﻿// @ts-check
+(function(angular) {
+  'use strict';
   class TemperatureService {
+    /**
+     * @param {number} weather
+     * @returns {string}
+     */
     getInfo(weather) {
       switch (weather) {
         case 0:
@@ -11,5 +17,7 @@
       }
     }
   }
-  angular.module('weather.app').service('temperature.service', TemperatureService);
+  angular
+    .module('weather.app')
+    .service('temperature.service', TemperatureService);
 })(angular);

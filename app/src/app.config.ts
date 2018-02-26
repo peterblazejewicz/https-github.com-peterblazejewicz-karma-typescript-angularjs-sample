@@ -1,4 +1,5 @@
 (function(angular) {
+  'use strict';
   function AppConfig(
     $provide: angular.IServiceProvider,
     $routeProvider: angular.route.IRouteProvider,
