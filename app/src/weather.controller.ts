@@ -7,12 +7,9 @@
   getDate(): string;
 }
 
-
 (function(angular) {
   class WeatherController implements IWeatherController {
-    constructor(private date: any) {
-      debugger;
-    }
+    constructor(private date: any) {}
 
     getDate() {
       return this.date.getDateString(new Date());
