@@ -1,4 +1,8 @@
 ﻿import { Config, ConfigOptions } from 'karma';
+
+const puppeteer = require("puppeteer");
+process.env.CHROME_BIN = puppeteer.executablePath();
+
 export default function(config: Config & ConfigOptions) {
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -25,7 +29,6 @@ export default function(config: Config & ConfigOptions) {
     plugins: [
       'karma-jasmine',
       'karma-chrome-launcher',
-      'karma-phantomjs-launcher',
       'karma-spec-reporter',
       'karma-typescript',
     ],
@@ -55,7 +58,7 @@ export default function(config: Config & ConfigOptions) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
 
     phantomjsLauncher: {
       // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom)
