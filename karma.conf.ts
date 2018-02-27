@@ -1,6 +1,7 @@
 ﻿import { Config, ConfigOptions } from 'karma';
 
-const puppeteer = require("puppeteer");
+const puppeteer = require('puppeteer');
+
 process.env.CHROME_BIN = puppeteer.executablePath();
 
 export default function(config: Config & ConfigOptions) {

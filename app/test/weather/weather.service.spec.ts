@@ -2,7 +2,7 @@
 import angular, { auto } from 'angular';
 
 describe('weather service', () => {
-  var weather: any;
+  let weather: any;
 
   beforeEach(angular.mock.module('weather.app'));
 
@@ -17,7 +17,7 @@ describe('weather service', () => {
   });
 
   it('should return a value', () => {
-    var value = weather.getInfo();
+    const value = weather.getInfo();
     expect(value).not.toBeUndefined();
   });
 });

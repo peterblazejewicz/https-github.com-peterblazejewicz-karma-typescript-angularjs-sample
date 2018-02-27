@@ -2,9 +2,9 @@
 import angular from 'angular';
 
 describe('weather controller', () => {
-  var $controller: any;
+  let $controller: any;
 
-  var testDateValue = '2017/8/22';
+  const testDateValue = '2017/8/22';
 
   beforeEach(angular.mock.module('weather.app'));
 
@@ -16,7 +16,7 @@ describe('weather controller', () => {
 
   it('should initialize correctly', () => {
     const controller = $controller('weather.controller', {
-      "date.service": {
+      'date.service': {
         getDateString: function() {
           return testDateValue;
         },
