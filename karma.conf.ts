@@ -61,9 +61,14 @@ export default function(config: Config & ConfigOptions) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['ChromeHeadless'],
 
-    phantomjsLauncher: {
-      // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom)
-      exitOnResourceError: true,
+    customLaunchers: {
+      ModifiedChromeHeadless: {
+        base: 'ChromeHeadless',
+        flags: [
+          '--disable-translate',
+          '--disable-extensions',
+          /*'--remote-debugging-port=9223'*/]
+      }
     },
 
     // Continuous Integration mode
